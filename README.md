@@ -248,7 +248,7 @@ Add screenshots here:
 
 # 👩‍💻 Authors
 
-**Harika Meka**
+**Kiran Nallasingu**
 
 GitHub: https://github.com/kirannalasingu
 
