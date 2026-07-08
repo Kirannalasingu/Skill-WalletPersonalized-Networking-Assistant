@@ -4,7 +4,7 @@
 
 All project demonstration videos are available in the Google Drive folder below:
 
-🔗 https://drive.google.com/drive/folders/1fkB9FpXlXMiTp0KPJWq7PDRMuuSkscoN?usp=sharing
+🔗 https://drive.google.com/file/d/1yBq4-Ef1kUnHdBF9PnOznzo-iNPtH2Jz/view?usp=sharing
 
 ---
 
@@ -12,7 +12,7 @@ All project demonstration videos are available in the Google Drive folder below:
 
 Watch the frontend demonstration here:
 
-🔗 https://drive.google.com/file/d/1cIpkCzS4Ze7rOeDNTivMoWajP_wJ6SqG/view?usp=drive_link
+🔗 https://drive.google.com/file/d/1ubfKYYIbOwlL3fFm7IWpvDX_2cfb64wl/view?usp=sharing
 
 ---
 
@@ -20,4 +20,4 @@ Watch the frontend demonstration here:
 
 Watch the backend demonstration here:
 
-🔗 https://drive.google.com/file/d/1zUle61c9v3elckanYNsSXNctJVLfTx8i/view?usp=sharing
+🔗 https://drive.google.com/file/d/1TSMC7FvPhtqCWFpONmCRQN_D7YnXrzIq/view?usp=sharing
