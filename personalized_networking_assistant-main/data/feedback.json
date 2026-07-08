@@ -1,0 +1,32 @@
+[
+  {
+    "timestamp": "2026-07-03T21:15:12.077622+05:30",
+    "rating": 3,
+    "comment": "ok",
+    "session_id": "bb30cd53"
+  },
+  {
+    "timestamp": "2026-07-03T21:23:21.551775+05:30",
+    "rating": 4,
+    "comment": "good",
+    "session_id": "53527692"
+  },
+  {
+    "timestamp": "2026-07-03T21:29:29.774799+05:30",
+    "rating": 4,
+    "comment": "well satisfied",
+    "session_id": "7c907cb0"
+  },
+  {
+    "timestamp": "2026-07-08T10:30:23.333002+05:30",
+    "rating": 5,
+    "comment": "All good",
+    "session_id": "a6fc632a"
+  },
+  {
+    "timestamp": "2026-07-08T10:33:12.251778+05:30",
+    "rating": 4,
+    "comment": "good",
+    "session_id": "bfbcd6ae"
+  }
+]
