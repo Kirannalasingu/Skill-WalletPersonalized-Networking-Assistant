@@ -1,16 +1,3 @@
-# ============================================================================
-# Personalized Networking Assistant — Conversation Router
-# ============================================================================
-# FastAPI router exposing all REST endpoints for the application:
-#   • POST /api/generate      — Analyze event + generate starters
-#   • POST /api/fact-check     — Wikipedia fact lookup
-#   • POST /api/feedback       — Submit user feedback
-#   • GET  /api/history        — Retrieve conversation history
-#   • DELETE /api/history      — Clear conversation history
-#   • GET  /api/feedback       — Retrieve all feedback entries
-#   • GET  /api/stats          — Aggregated analytics
-# ============================================================================
-
 from __future__ import annotations
 
 import logging
