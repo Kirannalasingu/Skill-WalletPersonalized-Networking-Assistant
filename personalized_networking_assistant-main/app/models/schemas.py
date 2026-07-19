@@ -1,10 +1,3 @@
-# ============================================================================
-# Personalized Networking Assistant — Pydantic Schemas
-# ============================================================================
-# Explicit validation models for every request and response payload that
-# flows through the FastAPI backend.  Using Pydantic v2 conventions.
-# ============================================================================
-
 from __future__ import annotations
 
 from datetime import datetime
