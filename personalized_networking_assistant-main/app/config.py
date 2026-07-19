@@ -1,10 +1,3 @@
-# ============================================================================
-# Personalized Networking Assistant — Application Configuration
-# ============================================================================
-# Centralized settings for the entire backend. Uses Pydantic BaseSettings
-# for environment-variable support and type-safe defaults.
-# ============================================================================
-
 from pathlib import Path
 from pydantic_settings import BaseSettings
 
