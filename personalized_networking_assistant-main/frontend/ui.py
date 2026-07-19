@@ -1,14 +1,4 @@
-# ============================================================================
-# Personalized Networking Assistant — Streamlit Frontend
-# ============================================================================
-# Premium dark-mode glassmorphic dashboard with 7 interactive pages.
-#
-# Run with:  streamlit run frontend/ui.py
-# Requires:  FastAPI backend running on http://localhost:8000
-# ============================================================================
-
 from __future__ import annotations
-
 import json
 import time
 import uuid
@@ -18,16 +8,9 @@ import pandas as pd
 import requests
 import streamlit as st
 
-# ---------------------------------------------------------------------------
-# Constants
-# ---------------------------------------------------------------------------
+
 API_BASE = "http://127.0.0.1:8000/api"
 SESSION_ID = str(uuid.uuid4())[:8]
-
-
-# ============================================================================
-#  CSS DESIGN SYSTEM
-# ============================================================================
 
 def inject_custom_css() -> None:
     """
@@ -487,11 +470,6 @@ input:focus {
         unsafe_allow_html=True,
     )
 
-
-# ============================================================================
-#  HELPER FUNCTIONS
-# ============================================================================
-
 def api_call(method: str, endpoint: str, payload: dict | None = None) -> dict | list | None:
     """
     Make a request to the FastAPI backend.  Returns parsed JSON on success,
@@ -534,11 +512,6 @@ def render_stat_card(icon: str, value: str, label: str) -> str:
         <div class="stat-label">{label}</div>
     </div>
     """
-
-
-# ============================================================================
-#  PAGE: HOME
-# ============================================================================
 
 def page_home() -> None:
     """Render the Home dashboard with hero, stats, features, and activity."""
@@ -671,11 +644,6 @@ def page_home() -> None:
             unsafe_allow_html=True,
         )
 
-
-# ============================================================================
-#  PAGE: SMART PROMPT GENERATOR
-# ============================================================================
-
 def page_generator() -> None:
     """Render the conversation-starter generator page."""
 
@@ -791,11 +759,6 @@ def page_generator() -> None:
             mime="application/json",
         )
 
-
-# ============================================================================
-#  PAGE: FACT CHECKER
-# ============================================================================
-
 def page_fact_checker() -> None:
     """Render the Wikipedia fact-check page."""
 
@@ -897,11 +860,6 @@ def page_fact_checker() -> None:
                 unsafe_allow_html=True,
             )
 
-
-# ============================================================================
-#  PAGE: CONVERSATION HISTORY
-# ============================================================================
-
 def page_history() -> None:
     """Render the conversation history page with table, search, and export."""
 
@@ -995,11 +953,6 @@ def page_history() -> None:
             st.success(f"✅ Cleared {result.get('deleted', 0)} history entries.")
             time.sleep(1)
             st.rerun()
-
-
-# ============================================================================
-#  PAGE: ANALYTICS DASHBOARD
-# ============================================================================
 
 def page_analytics() -> None:
     """Render the analytics dashboard with metrics, charts, and progress."""
@@ -1122,11 +1075,6 @@ def page_analytics() -> None:
         rating_counts.columns = ["Stars", "Count"]
         st.bar_chart(rating_counts.set_index("Stars"), use_container_width=True)
 
-
-# ============================================================================
-#  PAGE: FEEDBACK
-# ============================================================================
-
 def page_feedback() -> None:
     """Render the feedback submission and history page."""
 
@@ -1229,12 +1177,6 @@ def page_feedback() -> None:
             """,
             unsafe_allow_html=True,
         )
-
-
-# ============================================================================
-#  PAGE: SETTINGS & ABOUT
-# ============================================================================
-
 def page_settings() -> None:
     """Render the settings and about page."""
 
@@ -1361,11 +1303,6 @@ def page_settings() -> None:
             unsafe_allow_html=True,
         )
 
-
-# ============================================================================
-#  MAIN APPLICATION
-# ============================================================================
-
 def main() -> None:
     """Application entry point — configures the page and routes navigation."""
 
@@ -1456,9 +1393,5 @@ def main() -> None:
     page_fn = page_map.get(selection, page_home)
     page_fn()
 
-
-# ---------------------------------------------------------------------------
-# Entry point
-# ---------------------------------------------------------------------------
 if __name__ == "__main__":
     main()
