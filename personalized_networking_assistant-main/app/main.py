@@ -1,13 +1,3 @@
-# ============================================================================
-# Personalized Networking Assistant — FastAPI Application Entry Point
-# ============================================================================
-# Creates the FastAPI application, registers middleware, mounts routers,
-# and exposes a health-check endpoint.  Run via:
-#
-#     python -m app.main          (from the project root)
-#     uvicorn app.main:app --reload
-# ============================================================================
-
 from __future__ import annotations
 
 import logging
@@ -21,9 +11,7 @@ from app.config import settings
 from app.models.schemas import HealthResponse
 from app.routers.conversation import router as conversation_router
 
-# ---------------------------------------------------------------------------
-# Logging setup
-# ---------------------------------------------------------------------------
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
@@ -31,10 +19,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-
-# ---------------------------------------------------------------------------
-# Application lifespan (startup / shutdown hooks)
-# ---------------------------------------------------------------------------
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """
@@ -54,10 +38,6 @@ async def lifespan(app: FastAPI):
     # ── Shutdown ────────────────────────────────────────────────────────
     logger.info("👋 %s is shutting down.", settings.app_name)
 
-
-# ---------------------------------------------------------------------------
-# FastAPI application factory
-# ---------------------------------------------------------------------------
 app = FastAPI(
     title=settings.app_name,
     version=settings.app_version,
@@ -101,10 +81,6 @@ async def api_health_check() -> HealthResponse:
         timestamp=datetime.now(timezone.utc).astimezone().isoformat(),
     )
 
-
-# ---------------------------------------------------------------------------
-# Direct execution: python -m app.main
-# ---------------------------------------------------------------------------
 if __name__ == "__main__":
     import uvicorn
 
